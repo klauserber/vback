@@ -34,7 +34,7 @@ restore() {
     echo "Cleanup volume content..."
     rm -rf /volume/* /volume/..?* /volume/.[!.]*
     echo "Restoring from backup file."
-    pv $ARCHIVE_PATH | tar xzf - -C /volume/
+    pv $ARCHIVE_PATH | tar xzpf - -C /
 }
 
 # Needed because sometimes pty is not ready when executing docker-compose run
